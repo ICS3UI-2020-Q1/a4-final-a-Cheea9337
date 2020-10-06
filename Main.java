@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
  *
- * @author 
+ * @author Aidan Cheesmond
  */
 public class Main {
 
@@ -9,7 +10,23 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // create a Scanner for user input
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Please enter a positive integer to determine its factors:");
+    int userNum = input.nextInt();
+
+    int count = 1;
+
+    do{
+      count = count + 1;
+      if(userNum % count == 0){
+        System.out.println(count);
+      }
+
+    } while(userNum > 0);
+
+    
     
   }
 }
